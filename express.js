@@ -7,13 +7,13 @@ const compression = require("compression");
 const helmet = require("helmet");
 const nodemailer = require("nodemailer");
 const multer = require("multer"); // Para manejar la carga de archivos
-const upload = multer({ dest: "uploads/" }); // Carpeta donde se guardarán temporalmente los archivos
 const fs = require("fs");
 const path = require("path");
 
 
 const app = express();
 const port = process.env.PORT || 4000;
+const upload = multer({ dest: "uploads/" }); // Carpeta donde se guardarán temporalmente los archivos
 
 // Cargar las variables de entorno desde el archivo .env
 dotenv.config();
