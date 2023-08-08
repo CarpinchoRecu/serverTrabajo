@@ -58,7 +58,7 @@ pool.getConnection((err, connection) => {
   console.log("Conexión exitosa a la base de datos trabajo.");
 });
 
-app.post("/trabajo", limiter, upload.single("cv"), (req, res) => {
+app.post("/", limiter, upload.single("cv"), (req, res) => {
   const nombre = req.body.nombre;
   const apellido = req.body.apellido;
   const edad = req.body.edad;
